@@ -5,9 +5,8 @@ import axios from 'axios';
 import Button from './components/Button';
 
 const esp8266IPAddress = '192.168.0.13'; // Substitua pelo endereço IP do seu ESP8266
-const url = `http://${esp8266IPAddress}/seuarquivo.html`;
+const url = `http://192.168.0.13:80/`;
 
-alert("teste")
 const App = () => {
   
   const handleButtonClick = () => {
@@ -18,8 +17,9 @@ const App = () => {
   }
 
   const sendData = async () => {
+    alert("teste")
     try {
-      const response = await axios.post(url, {
+      const response = await axios.post("https://8d21-2804-29b8-5047-54-f50a-75f2-a546-4466.ngrok-free.app", {
         data: 'seus dados aqui',
       });
       console.log(response.data);
@@ -31,7 +31,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Text>Olá</Text>
-      <Button label='APERTE AQUI'  onClick={() => handleButtonClick('Alim')}/>
+      <Button label='APERTE AQUI'  onClick={() => sendData()}/>
       <StatusBar style="auto" />
     </View>
   );
