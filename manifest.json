@@ -1,0 +1,9 @@
+{
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "lang": "en",
+  "name": "pet_feeder",
+  "short_name": "pet_feeder",
+  "start_url": "/?utm_source=web_app_manifest",
+  "orientation": "portrait"
+}
