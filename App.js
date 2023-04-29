@@ -17,14 +17,13 @@ const App = () => {
   }
 
   const sendData = async () => {
-    alert("teste")
     try {
       const response = await axios.post("https://8d21-2804-29b8-5047-54-f50a-75f2-a546-4466.ngrok-free.app", {
         data: 'seus dados aqui',
       });
       console.log(response.data);
     } catch (error) {
-      alert(console.error(error));
+      alert(console.error(error.message));
     }
   };
 
