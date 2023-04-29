@@ -1,10 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Alert, StyleSheet, Text, View } from 'react-native';
+import axios from 'axios';
 
-export default function App() {
+import Button from './components/Button';
+
+
+const App = () => {
+  const sendMessage = (message) =>{
+    Alert.alert(message)
+        
+  }
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text>Olá</Text>
+      <Button label='APERTE AQUI'  onClick={() => sendMessage('Alim')}/>
       <StatusBar style="auto" />
     </View>
   );
@@ -18,3 +27,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default App ;
