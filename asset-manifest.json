@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/pet_feeder/static/js/main.624df1a7.js",
+    "main.js": "/pet_feeder/static/js/main.bd5cdf5d.js",
     "static/js/180.cc872805.js": "/pet_feeder/static/js/180.cc872805.js",
     "favicon.ico": "/pet_feeder/favicon.ico",
     "index.html": "/pet_feeder/index.html",
@@ -8,11 +8,11 @@
     "favicon-16.png": "/pet_feeder/favicon-16.png",
     "manifest.json": "/pet_feeder/manifest.json",
     "serve.json": "/pet_feeder/serve.json",
-    "main.624df1a7.js.map": "/pet_feeder/static/js/main.624df1a7.js.map",
+    "main.bd5cdf5d.js.map": "/pet_feeder/static/js/main.bd5cdf5d.js.map",
     "180.cc872805.js.map": "/pet_feeder/static/js/180.cc872805.js.map"
   },
   "entrypoints": [
     "static/js/180.cc872805.js",
-    "static/js/main.624df1a7.js"
+    "static/js/main.bd5cdf5d.js"
   ]
 }
