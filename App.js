@@ -7,7 +7,7 @@ import Button from './components/Button';
 const esp8266IPAddress = '192.168.0.13'; // Substitua pelo endereço IP do seu ESP8266
 const url = `http://${esp8266IPAddress}/seuarquivo.html`;
 
-
+alert("teste")
 const App = () => {
   alert("teste")
   const handleButtonClick = () => {
