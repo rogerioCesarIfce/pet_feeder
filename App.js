@@ -9,11 +9,12 @@ const url = `http://${esp8266IPAddress}/seuarquivo.html`;
 
 alert("teste")
 const App = () => {
-  alert("teste")
+  
   const handleButtonClick = () => {
     Alert.alert('Botão clicado!', 'Você clicou no botão.', [
       { text: 'OK' }
     ]);
+    alert("teste")
   }
 
   const sendData = async () => {
