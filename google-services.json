@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "809707246847",
+    "project_id": "catsfeeder-ac85b",
+    "storage_bucket": "catsfeeder-ac85b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809707246847:android:782d61328f4458956be8ca",
+        "android_client_info": {
+          "package_name": "br.com.pet_feeder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809707246847-0a7dspllv41ipncecj4tn4fgro4g4ct4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj32VDgqseaDPcLq2rJbyzeFNL07sbeeg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809707246847-0a7dspllv41ipncecj4tn4fgro4g4ct4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

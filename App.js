@@ -1,40 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import { Alert, StyleSheet, Text, View } from 'react-native';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { SignIn } from './components/SignIn';
+import Test_mqtt from './mqtt/test_mqtt';
 
-import Button from './components/Button';
+import {getAuth, onAuthStateChanged} from 'firebase/auth'
+import { initializeApp } from 'firebase/app';
+import { firebaseConfig } from './firebase-config'
 
-const esp8266IPAddress = '192.168.0.13'; // Substitua pelo endereço IP do seu ESP8266
-const url = `http://192.168.0.13:80/`;
 
 const App = () => {
-  
-  const handleButtonClick = () => {
-    Alert.alert('Botão clicado!', 'Você clicou no botão.', [
-      { text: 'OK' }
-    ]);
-    alert("teste")
-  }
 
-  const sendData = async () => {
-    try {
-      const response = await axios.post("https://sumo.serveo.net/", {
-        data: 'seus dados aqui',
-      });
-      alert(response.data);
-    } catch (error) {
-      alert(error);
-    }
-  };
+  const [user, setUser]  = useState(null);
+  const app = initializeApp(firebaseConfig)
+  const auth = getAuth(app)
+
+  useEffect(() => {
+   const unsubscribe =   onAuthStateChanged(auth, _user => {
+      setUser(_user)
+    });
+
+    return unsubscribe;
+  }, [])
 
   return (
     <View style={styles.container}>
-      <Text>Olá</Text>
-      <Button label='APERTE AQUI'  onClick={() => sendData()}/>
-      <StatusBar style="auto" />
+      {user ? <Test_mqtt /> : <SignIn />}
+      
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -42,7 +36,35 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 20
   },
+  title: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 20
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    padding: 10,
+    marginBottom: 20,
+    width: '100%'
+  },
+  button: {
+    backgroundColor: 'blue',
+    padding: 10,
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+    minWidth: '50%'
+  },
+  buttonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    textTransform: 'uppercase'
+  }
 });
 
-export default App ;
+
+export default App;
