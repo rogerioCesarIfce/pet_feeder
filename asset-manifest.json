@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.js": "/pet_feeder/static/js/main.668eb310.js",
-    "static/js/180.cc872805.js": "/pet_feeder/static/js/180.cc872805.js",
+    "main.js": "/pet_feeder/static/js/main.6901118b.js",
+    "static/js/308.483cb7b8.js": "/pet_feeder/static/js/308.483cb7b8.js",
+    "static/media/icon.png": "/pet_feeder/static/media/icon.608e4d9dafd9fd3d79c3.png",
     "favicon.ico": "/pet_feeder/favicon.ico",
     "index.html": "/pet_feeder/index.html",
     "favicon-32.png": "/pet_feeder/favicon-32.png",
     "favicon-16.png": "/pet_feeder/favicon-16.png",
     "manifest.json": "/pet_feeder/manifest.json",
     "serve.json": "/pet_feeder/serve.json",
-    "main.668eb310.js.map": "/pet_feeder/static/js/main.668eb310.js.map",
-    "180.cc872805.js.map": "/pet_feeder/static/js/180.cc872805.js.map"
+    "main.6901118b.js.map": "/pet_feeder/static/js/main.6901118b.js.map",
+    "308.483cb7b8.js.map": "/pet_feeder/static/js/308.483cb7b8.js.map"
   },
   "entrypoints": [
-    "static/js/180.cc872805.js",
-    "static/js/main.668eb310.js"
+    "static/js/308.483cb7b8.js",
+    "static/js/main.6901118b.js"
   ]
 }
